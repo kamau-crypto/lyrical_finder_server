@@ -50,9 +50,7 @@ export class MusicServiceImpl implements MusicService {
     this.musixMatchApiBaseUrl = `${cleanBaseUrl}/${MusixMatchApiV1.VERSION}/`;
 
     console.log(
-      `Music service initialized.\nMusixMatch API URL: [${
-        this.musixMatchApiBaseUrl
-      }]`,
+      `Music service initialized.\nMusixMatch API URL: [${this.musixMatchApiBaseUrl}]`,
     );
   }
 
