@@ -15,7 +15,7 @@ import { ConfigModule } from '@nestjs/config';
     }),
     MusixmatchModule,
     SongModule,
-    ConfigModule.forRoot({ envFilePath: ['.env.local'], isGlobal: true }),
+    ConfigModule.forRoot({ isGlobal: true }),
   ],
   controllers: [AppController],
   providers: [AppService],
