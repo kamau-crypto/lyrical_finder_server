@@ -1,4 +1,18 @@
-import { Resolver } from '@nestjs/graphql';
+import { Inject } from '@nestjs/common';
+import { Args, Query, Resolver } from '@nestjs/graphql';
+import { MusicServiceImpl } from 'src/musixmatch';
+import { MusicService } from '../musixmatch/services';
+import { TYPES } from 'src/musixmatch/ioc/types';
+import { ArtistEntity } from './artist.dto';
 
 @Resolver()
-export class ArtistResolver {}
+export class ArtistResolver {
+  constructor(
+    @Inject(TYPES.MUSIC_SERVICE)
+    private readonly musicService: MusicService,
+  ) {}
+  @Query()
+  async artists(@Args('name') name: string): Promise<ArtistEntity[]> {
+    return this.musicService.findArtists(name).toPromise();
+  }
+}
