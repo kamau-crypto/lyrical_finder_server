@@ -5,6 +5,9 @@ import { AppService } from './app.service';
 import { MusixmatchModule } from './musixmatch/musixmatch.module';
 import { SongModule } from './song/song.module';
 import { ConfigModule } from '@nestjs/config';
+import { ArtistModule } from './artist/artist.module';
+import { SongLyricsResolver } from './song-lyrics/song-lyrics.resolver';
+import { SongLyricsModule } from './song-lyrics/song-lyrics.module';
 
 @Module({
   imports: [
@@ -16,8 +19,10 @@ import { ConfigModule } from '@nestjs/config';
     MusixmatchModule,
     SongModule,
     ConfigModule.forRoot({ isGlobal: true }),
+    ArtistModule,
+    SongLyricsModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, SongLyricsResolver],
 })
 export class AppModule {}
