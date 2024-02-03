@@ -3,8 +3,15 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
+type ArtistEntity {
+  id: String!
+  name: String!
+}
+
 type Query {
   songs(value: String!): [SongDto!]!
+  artists(name: String!): [ArtistEntity!]!
+  songLyrics(id: String!): SongLyricsEntity!
 }
 
 type SongDto {
@@ -13,4 +20,11 @@ type SongDto {
   artistId: String!
   hasLyrics: Boolean!
   genres: [String!]!
+}
+
+type SongLyricsEntity {
+  id: ID!
+  copyright: String!
+  explicit: Boolean!
+  lyrics: String!
 }
