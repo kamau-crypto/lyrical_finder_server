@@ -1,7 +1,7 @@
 import { Inject } from '@nestjs/common';
 import { Args, Query, Resolver } from '@nestjs/graphql';
 import { MusicService } from 'src/musixmatch';
-import { TYPES } from 'src/musixmatch/ioc/types';
+import { TYPES } from '../musixmatch/ioc/types';
 import { SongLyricsEntity } from './song-lyrics.dto';
 
 @Resolver('SongLyrics')
