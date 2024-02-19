@@ -8,11 +8,12 @@ import { ConfigModule } from '@nestjs/config';
 import { ArtistModule } from './artist/artist.module';
 import { SongLyricsResolver } from './song-lyrics/song-lyrics.resolver';
 import { SongLyricsModule } from './song-lyrics/song-lyrics.module';
+import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
 @Module({
   imports: [
-    GraphQLModule.forRoot({
-      debug: true,
+    GraphQLModule.forRoot<ApolloDriverConfig>({
+      driver: ApolloDriver,
       playground: true,
       autoSchemaFile: 'schema.gql',
     }),

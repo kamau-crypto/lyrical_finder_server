@@ -1,19 +1,19 @@
-import { Field, ID, ObjectType } from 'type-graphql';
+import { Field, ID, ObjectType } from '@nestjs/graphql';
 
 @ObjectType()
 export class SongDto {
   @Field(() => ID)
-  id: string;
+  id!: string;
 
   @Field()
-  name: string;
+  name!: string;
 
   @Field()
-  artistId: string;
+  artistId!: string;
 
   @Field(() => Boolean)
-  hasLyrics: boolean;
+  hasLyrics!: boolean;
 
   @Field(() => [String])
-  genres: string[];
+  genres!: string[];
 }

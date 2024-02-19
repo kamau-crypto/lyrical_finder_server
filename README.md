@@ -1,75 +1,67 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+[![example-nestjs](https://github.com/koyeb/example-nestjs/actions/workflows/deploy.yaml/badge.svg)](https://github.com/koyeb/example-nestjs/actions)
 
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-[linux-url]: https://travis-ci.org/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/dm/@nestjs/core.svg" alt="NPM Downloads" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://api.travis-ci.org/nestjs/nest.svg?branch=master" alt="Travis" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://img.shields.io/travis/nestjs/nest/master.svg?label=linux" alt="Linux" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#5" alt="Coverage" /></a>
-<a href="https://gitter.im/nestjs/nestjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge"><img src="https://badges.gitter.im/nestjs/nestjs.svg" alt="Gitter" /></a>
-<a href="https://opencollective.com/nest#backer"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
-  <a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<div align="center">
+  <a href="https://koyeb.com">
+    <img src="https://www.koyeb.com/static/images/icons/koyeb.svg" alt="Logo" width="80" height="80">
+  </a>
+  <h3 align="center">Koyeb Serverless Platform</h3>
+  <p align="center">
+    Deploy a NestJS application on Koyeb
+    <br />
+    <a href="https://koyeb.com">Learn more about Koyeb</a>
+    ·
+    <a href="https://koyeb.com/docs">Explore the documentation</a>
+    ·
+    <a href="https://koyeb.com/tutorials">Discover our tutorials</a>
+  </p>
+</div>
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## About Koyeb and the NestJS example application
 
-## Installation
+Koyeb is a developer-friendly serverless platform to deploy apps globally. No-ops, servers, or infrastructure management.  This repository contains a NestJS application you can deploy on the Koyeb serverless platform for testing.
 
-```bash
-$ npm install
-```
+This example application is designed to show how a NestJS application can be deployed on Koyeb.  You can follow the associated [deploy guide](https://koyeb.com/docs/deploy/nestjs) to learn more about the application and how to extend it.
 
-## Running the app
+## Getting Started
 
-```bash
-# development
-$ npm run start
+Follow the steps below to deploy and run the NestJS application on your Koyeb account.
 
-# watch mode
-$ npm run start:dev
+### Requirements
 
-# production mode
-$ npm run start:prod
-```
+You need a Koyeb account to successfully deploy and run this application. If you don't already have an account, you can sign-up for free [here](https://app.koyeb.com/auth/signup).
 
-## Test
+### Deploy using the Koyeb button
 
-```bash
-# unit tests
-$ npm run test
+The fastest way to deploy the NestJS application is to click the **Deploy to Koyeb** button below.
 
-# e2e tests
-$ npm run test:e2e
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=example-nestjs&type=git&repository=koyeb/example-nestjs&branch=main&env[PORT]=8000&ports=8000;http;/)
 
-# test coverage
-$ npm run test:cov
-```
+Clicking on this button brings you to the Koyeb App creation page with everything pre-set to launch this application.
 
-## Support
+_To modify this application example, you will need to fork this repository. Checkout the [fork and deploy](#fork-and-deploy-to-koyeb) instructions._
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+# ## Fork and deploy to Koyeb
 
-## Stay in touch
+If you want to customize and enhance this application, you need to fork this repository.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+If you used the **Deploy to Koyeb** button, you can simply link your service to your forked repository to be able to push changes.
+Alternatively, you can manually create the application as described below.
 
-## License
+On the [Koyeb Control Panel](//app.koyeb.com/apps), click the **Create App** button to go to the App creation page.
 
-  Nest is [MIT licensed](LICENSE).
+1. Select `GitHub` as the deployment method to use.
+2. In the repositories list, select the repository you just forked.
+3. Specify the branch to deploy, in this case `main`.
+4. Choose the builder for the repository.  This repository can be built using buildpacks or a Dockerfile.
+5. Give your App a name, i.e `nestjs-on-koyeb`, and click **Deploy**.
+
+You will be taken to the deployment page where you can follow the build of your NestJS application. Once the build is completed, your application will be deployed and you will be able to access it via `<YOUR_APP_NAME>-<YOUR_ORG_NAME>.koyeb.app`.
+
+## Contributing
+
+If you have any questions, ideas or suggestions regarding this application sample, feel free to open an [issue](https://github.com/koyeb/example-nestjs/issues) or fork this repository and open a [pull request](https://github.com/koyeb/example-nestjs/pulls).
+
+## Contact
+
+[Koyeb](https://www.koyeb.com) - [@gokoyeb](https://twitter.com/gokoyeb) - [Slack](http://slack.koyeb.com/)
