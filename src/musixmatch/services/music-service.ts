@@ -48,10 +48,6 @@ export class MusicServiceImpl implements MusicService {
     }
 
     this.musixMatchApiBaseUrl = `${cleanBaseUrl}/${MusixMatchApiV1.VERSION}/`;
-
-    console.log(
-      `Music service initialized.\nMusixMatch API URL: [${this.musixMatchApiBaseUrl}]`,
-    );
   }
 
   findArtists(name: string): Observable<Artist[]> {
@@ -66,9 +62,6 @@ export class MusicServiceImpl implements MusicService {
       [MusixMatchApiV1Params.PAGE_SIZE]: 100,
       [MusixMatchApiV1Params.ARTIST]: name,
     };
-
-    // console.log('Request URL: ', requestURL);
-    // console.log('Request params: ', requestParams);
 
     return observableAxiosGetRequest(
       requestURL,
